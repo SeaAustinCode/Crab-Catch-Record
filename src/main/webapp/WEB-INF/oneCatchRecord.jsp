@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Create a new Catch Record</title>
+<title>View Individual Catch Record</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/main.css">
 <!-- change to match your file/naming structure -->
@@ -19,10 +19,24 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>WELCOME ${thisUser.userName}</h1>
-<h1>WELCOME ${thisUser.id}</h1>
-<hr />
-<a href="/catchrecords/new">Create a new Catch Record</a>
-<hr />
+	<table class="table table-striped">
+		<thead>
+			<th scope="col">Location</th>
+			<th scope="col"># of crabs caught</th>
+			<th scope="col">Date</th>
+			<th scope="col">Actions</th>
+			<tr>
+				<td style="color: blue">${thisCatchRecord.marinearea}</td>
+				<td style="color: orange">${thisCatchRecord.catchamount}/5</td>
+				<td style="color: red">${thisCatchRecord.month}/${thisCatchRecord.day}</td>
+				<td><c:if
+						test="${user_id == thisCatchRecord.catchrecordowner.id}">
+						<form action="/remove/${thisCatchRecord.id }" method="post">
+							<button>Delete Catch Record</button>
+						</form>
+					</c:if></td>
+		</thead>
+	</table>
+
 </body>
 </html>

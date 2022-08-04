@@ -21,7 +21,7 @@
 <body>
 	<h1>Create a new Crab Catch Record</h1>
 	<hr />
-	<div class="col-7">
+	<div>
 		<form:form action="/catchrecords" method="post"
 			modelAttribute="catchRecord">
 			<form:input type="hidden" path="catchrecordowner"
@@ -125,11 +125,20 @@
 	</div>
 	<table class="table table-striped">
 		<thead>
+				<th scope="col">#</th>
+				<th scope="col">Location</th>
+				<th scope="col"># of crabs caught</th>
+				<th scope="col">Date</th>
+				<th scope="col">Actions</th>
 			<c:forEach items="${allCatchRecords}" var="catchRecord">
 				<tr>
-					<td style="color: blue">Location: ${catchRecord.marinearea}</td>
-					<td style="color: orange"># of crabs caught: ${catchRecord.catchamount}/5</td>
-					<td style="color: red">Date: ${catchRecord.month} / ${catchRecord.day}</td>
+				<c:if test="${user_id == catchRecord.catchrecordowner.id}"> <!-- This logic makes it so a user can only see the catch records that they created. --> 
+					<td>${catchRecord.id }</td>
+					<td style="color: blue">${catchRecord.marinearea}</td>
+					<td style="color: orange">${catchRecord.catchamount}/5</td>
+					<td style="color: red">${catchRecord.month}/${catchRecord.day}</td>
+					<td><a class="btn btn-primary" href="/catchrecords/${catchRecord.id}">View</a></td>
+				</c:if>
 			</c:forEach>
 		</thead>
 	</table>
