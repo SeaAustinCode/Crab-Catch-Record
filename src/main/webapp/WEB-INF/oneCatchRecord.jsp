@@ -27,8 +27,8 @@
 			<th scope="col">Actions</th>
 			<tr>
 				<td style="color: blue">${thisCatchRecord.marinearea}</td>
-				<td style="color: orange">${thisCatchRecord.catchamount}/5</td>
-				<td style="color: red">${thisCatchRecord.month}/${thisCatchRecord.day}</td>
+				<td style="color: blue">${thisCatchRecord.catchamount}/5</td>
+				<td style="color: blue">${thisCatchRecord.month}/${thisCatchRecord.day}</td>
 				<td><c:if
 						test="${user_id == thisCatchRecord.catchrecordowner.id}">
 						<form action="/remove/${thisCatchRecord.id }" method="post">
