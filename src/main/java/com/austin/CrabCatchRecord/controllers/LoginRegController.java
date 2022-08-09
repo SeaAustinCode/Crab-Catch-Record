@@ -1,5 +1,7 @@
 package com.austin.CrabCatchRecord.controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -12,8 +14,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.austin.CrabCatchRecord.models.CatchRecord;
 import com.austin.CrabCatchRecord.models.LoginUser;
 import com.austin.CrabCatchRecord.models.User;
+import com.austin.CrabCatchRecord.services.CatchRecordService;
 import com.austin.CrabCatchRecord.services.UserService;
 
 
@@ -22,9 +26,12 @@ public class LoginRegController {
 
 	@Autowired
 	private UserService userServ;
+	
+	@Autowired
+	private CatchRecordService catchRecordService;
 
 		// RENDER LOGIN and REG PAGE // This Login and Registration does not force you to go to the dashboard if you are in session - work to change this for project.
-	@GetMapping("/") // this will have the login and registration form 
+	@GetMapping("/login-and-registration-page") // this will have the login and registration form 
 	public String index(Model model) {
 
 		// Bind empty User and LoginUser objects to the JSP
@@ -84,6 +91,8 @@ public class LoginRegController {
 		} else {
 			User thisUser = userServ.findOne(userId);
 			model.addAttribute("thisUser", thisUser);
+			List<CatchRecord>allCatchRecords = catchRecordService.allCatchRecords();
+			model.addAttribute("allCatchRecords", allCatchRecords);
 			return "Home.jsp";
 		}
 	}

@@ -35,6 +35,7 @@
 							<button>Delete Catch Record</button>
 						</form>
 					</c:if></td>
+				<td><c:if test="${user_id == thisCatchRecord.catchrecordowner.id}"><a href="/catchrecords/${id}/edit">Edit</a></c:if></td>
 		</thead>
 	</table>
 

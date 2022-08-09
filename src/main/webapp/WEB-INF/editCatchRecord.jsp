@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Create a new Catch Record</title>
+<title>Edit Individual Catch Record</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/main.css">
 <!-- change to match your file/naming structure -->
@@ -19,13 +19,17 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Create a new Crab Catch Record</h1>
-	<hr />
 	<div>
-		<form:form action="/catchrecords/new/method" method="post"
-			modelAttribute="catchRecord">
-			<form:input type="hidden" path="catchrecordowner"
-				value="${userloggedin.id }" />
+		<h1>
+			Change
+			<c:out value="${thisCatchRecord.marinearea }" />
+		</h1>
+	</div>
+	<div class="col-7">
+		<form:form action="/catchrecords/${catchRecord.id}/method"
+			method="post" modelAttribute="catchRecord">
+			<input type="hidden" name="_method" value="put">
+			<form:input type="hidden" path="catchrecordowner" value="${userloggedin.id }"/>
 			<div>
 				<form:label path="marinearea">Marine Area</form:label>
 				<form:errors path="marinearea" style="color: red" />
@@ -116,12 +120,16 @@
 				</form:select>
 			</div>
 
-			<button>Create</button>
+			<button>Update</button>
 		</form:form>
 	</div>
-	<hr />
-	<div>
-		<a href="/home">Return Home</a>
+	<div class="container d-flex">
+		<form action="/catchrecords/{id}/method" method="post">
+			<input type="hidden" name="_method" value="delete">
+			<input type="submit" value="Delete"></form>
+		
+		<a href="/home">Cancel</a>
 	</div>
+
 </body>
 </html>
