@@ -34,10 +34,17 @@ public class CatchRecordController {
 	
 	// LANDING PAGE
 	@GetMapping("/")
-	public String createNewCatchRecordJSP(@ModelAttribute("catchRecord") CatchRecord catchRecord,
+	public String goToLandingPage(@ModelAttribute("catchRecord") CatchRecord catchRecord,
 			Model model) {
 			return "LandingPage.jsp";
 		}
+	
+	// Marine Areas
+		@GetMapping("/marine-areas")
+		public String goToMarineAreaPage(@ModelAttribute("catchRecord") CatchRecord catchRecord,
+				Model model) {
+				return "MarineArea.jsp";
+			}
 
 	// CREATE NEW CATCH RECORD JSP
 	@GetMapping("/catchrecords/new")

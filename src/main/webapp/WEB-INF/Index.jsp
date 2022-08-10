@@ -19,13 +19,13 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color: #ffffd4;">
 <h1 class="centered"></h1>
-	<div class="container">
+	<div class="container w=75%">
 
 		<!-- REGISTER A NEW USER  -->
 		<!-- bring in the newUser empty Object -->
-		<div class="login-reg-main border-round give-me-space-up-down">
+		<div class="border-round" >
 			<h3>Register:</h3>
 			<form:form action="/register" method="post" modelAttribute="newUser">
 				<div class="form-group">
