@@ -12,7 +12,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login and Registration page for Washington crab catch record card</title>
+<title>Login and Registration page for Washington crab catch
+	record card</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/main.css">
 <!-- change to match your file/naming structure -->
@@ -20,12 +21,26 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body style="background-color: #ffffd4;">
-<h1 class="centered"></h1>
-	<div class="container w=75%">
+	<div class="container p-3" style="background-color: #fed98e;">
+		<div
+			class="d-flex justify-content-between align-items-center rounded-lg"
+			style="background-color: #ffffd4;">
+			<h1 class="p-3" style="color: #cc4c02">Austin's Crab Shack</h1>
+			<ul class="nav nav-pills gap-3 p-3 justify-content-end">
+				<li class="nav-item"><a class="nav-link text-white"
+					style="background-color: #cc4c02" href="/">Home</a></li>
+				<li class="nav-item"><a class="nav-link text-white"
+					style="background-color: #cc4c02" href="/marine-areas">Marine
+						Areas</a></li>
+			</ul>
+		</div>
+	</div>
+	<h1 class="centered"></h1>
+	<div class="container">
 
 		<!-- REGISTER A NEW USER  -->
 		<!-- bring in the newUser empty Object -->
-		<div class="border-round" >
+		<div class="container p-4 border">
 			<h3>Register:</h3>
 			<form:form action="/register" method="post" modelAttribute="newUser">
 				<div class="form-group">
@@ -54,7 +69,7 @@
 
 		<!-- LOGIN -->
 		<!-- newLogin object will touch the model to validate only -->
-		<div class="login-reg-main border-round">
+		<div class="container p-4 border my-4" style="background-color: #cc4c02">
 			<h3>Login:</h3>
 			<form:form action="/login" method="post" modelAttribute="newLogin">
 				<div class="form-group">
