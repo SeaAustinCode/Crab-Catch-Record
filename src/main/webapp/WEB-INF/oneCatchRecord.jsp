@@ -18,26 +18,34 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body>
-	<table class="table table-striped">
-		<thead>
-			<th scope="col">Location</th>
-			<th scope="col"># of crabs caught</th>
-			<th scope="col">Date</th>
-			<th scope="col">Actions</th>
-			<tr>
-				<td style="color: blue">${thisCatchRecord.marinearea}</td>
-				<td style="color: blue">${thisCatchRecord.catchamount}/5</td>
-				<td style="color: blue">${thisCatchRecord.month}/${thisCatchRecord.day}</td>
-				<td><c:if
-						test="${user_id == thisCatchRecord.catchrecordowner.id}">
-						<form action="/remove/${thisCatchRecord.id }" method="post">
-							<button>Delete Catch Record</button>
-						</form>
-					</c:if></td>
-				<td><c:if test="${user_id == thisCatchRecord.catchrecordowner.id}"><a href="/catchrecords/${id}/edit">Edit</a></c:if></td>
-		</thead>
-	</table>
+<body style="background-color: #ffffd4;">
+	<div class="container p-3 my-3 rounded">
+		<table class="table table-striped text-white"
+			style="background-color: #fe9929">
+			<thead>
+				<th scope="col">Location</th>
+				<th scope="col"># of crabs caught</th>
+				<th scope="col">Date</th>
+				<th scope="col" class="text-center">Actions</th>
+				<tr>
+					<td>${thisCatchRecord.marinearea}</td>
+					<td>${thisCatchRecord.catchamount}/5</td>
+					<td>${thisCatchRecord.month}/${thisCatchRecord.day}</td>
+					<td><c:if
+							test="${user_id == thisCatchRecord.catchrecordowner.id}">
+							<form action="/remove/${thisCatchRecord.id }" method="post">
+								<button class="text-white" style="background-color: #cc4c02">Delete
+									Catch Record</button>
+							</form>
+						</c:if></td>
+					<td><c:if
+							test="${user_id == thisCatchRecord.catchrecordowner.id}">
+							<a class="btn text-white" style="background-color: #cc4c02"
+								href="/catchrecords/${id}/edit">Edit</a>
+						</c:if></td>
+			</thead>
+		</table>
+	</div>
 
 </body>
 </html>

@@ -21,7 +21,8 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body style="background-color: #ffffd4;">
-	<div class="container p-3" style="background-color: #fed98e;">
+	<div class="container p-3 my-3 rounded"
+		style="background-color: #fed98e;">
 		<div
 			class="d-flex justify-content-between align-items-center rounded-lg"
 			style="background-color: #ffffd4;">
@@ -37,10 +38,29 @@
 	</div>
 	<h1 class="centered"></h1>
 	<div class="container">
+		<!-- LOGIN -->
+		<!-- newLogin object will touch the model to validate only -->
+		<div class="container p-4 border my-4 rounded"
+			style="background-color: #fed98e">
+			<h3>Login:</h3>
+			<form:form action="/login" method="post" modelAttribute="newLogin">
+				<div class="form-group">
+					<label>Email:</label>
+					<form:input path="email" class="form-control" />
+					<form:errors path="email" class="text-danger" />
+				</div>
+				<div class="form-group">
+					<label>Password:</label>
+					<form:password path="password" class="form-control" />
+					<form:errors path="password" class="text-danger" />
+				</div>
+				<input type="submit" value="Login" class="btn my-3 text-white" style="background-color: #cc4c02" />
+			</form:form>
+		</div>
 
 		<!-- REGISTER A NEW USER  -->
 		<!-- bring in the newUser empty Object -->
-		<div class="container p-4 border">
+		<div class="container p-4 border rounded" style="background-color:#fed98e">
 			<h3>Register:</h3>
 			<form:form action="/register" method="post" modelAttribute="newUser">
 				<div class="form-group">
@@ -63,29 +83,9 @@
 					<form:password path="confirm" class="form-control" />
 					<form:errors path="confirm" class="text-danger" />
 				</div>
-				<input type="submit" value="Register" class="btn btn-primary" />
+				<input type="submit" value="Register" class="btn my-3 text-white" style="background-color: #cc4c02" />
 			</form:form>
 		</div>
-
-		<!-- LOGIN -->
-		<!-- newLogin object will touch the model to validate only -->
-		<div class="container p-4 border my-4" style="background-color: #cc4c02">
-			<h3>Login:</h3>
-			<form:form action="/login" method="post" modelAttribute="newLogin">
-				<div class="form-group">
-					<label>Email:</label>
-					<form:input path="email" class="form-control" />
-					<form:errors path="email" class="text-danger" />
-				</div>
-				<div class="form-group">
-					<label>Password:</label>
-					<form:password path="password" class="form-control" />
-					<form:errors path="password" class="text-danger" />
-				</div>
-				<input type="submit" value="Login" class="btn btn-success" />
-			</form:form>
-		</div>
-
 	</div>
 </body>
 </html>

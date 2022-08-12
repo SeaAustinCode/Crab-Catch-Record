@@ -14,6 +14,7 @@
 <title>WDFW Crab Catch Record</title>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/main.css">
+<link href="static/css/styles.css" rel="stylesheet">
 <!-- change to match your file/naming structure -->
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
@@ -42,6 +43,12 @@
 			</ul>
 		</div>
 	</div>
+	<div id="hero-image" class="hero-image container">
+		<div>
+			<!-- <img src="/images/crab_hero_image.jpg"
+				class="img-fluid w-100 rounded"> -->
+		</div>
+	</div>
 	<div class="container p-3 my-3 rounded"
 		style="background-color: #fe9929;">
 		<h4>Hello and welcome to Austin's Crab Shack!</h4>
@@ -53,17 +60,27 @@
 			electronically. This allows for easy organization for users and
 			streamlined data collection for WDFW!</h6>
 	</div>
-	<div class="container p-3 my-3 d-flex align-items-center"
+	<div class="container p-3 my-3 d-flex align-items-center rounded"
 		style="background-color: #fed98e">
-		<h6>Several species of crab are found in Washington's marine
-			waters and along its shores, though only a few are large enough to be
-			of commercial and sport interest. Crabs are crustaceans, having an
-			exterior skeleton or shell. <br><br>When crabbing in Washington, it's
-			important to be able to identify your catch, to ensure you've caught
-			the correct species.<br><br>It's also important to identify whether a crab
-			is soft-shelled -- <strong>crabbers must release all soft-shell crab.</strong></h6>
+		<h6>
+			Several species of crab are found in Washington's marine waters and
+			along its shores, though only a few are large enough to be of
+			commercial and sport interest. Crabs are crustaceans, having an
+			exterior skeleton or shell. <br> <br>When crabbing in
+			Washington, it's important to be able to identify your catch, to
+			ensure you've caught the correct species.<br> <br>It's also
+			important to identify whether a crab is soft-shelled -- <strong>crabbers
+				must release all soft-shell crab.</strong>
+		</h6>
 		<img class="rounded img-fluid" alt="Washington Dungeoness Crab"
 			src="https://wdfw.wa.gov/sites/default/files/styles/page_body_half_width/public/2019-04/cancer_productus.jpg?itok=aCqSl41J">
+	</div>
+	<div class="container p-3 my-3 d-flex align-items-center"
+		style="background-color: #fe9929">
+		<div class="container p-3 m-3" style="background-color: #fed98e">Container
+			1</div>
+		<div class="container p-3 m-3" style="background-color: #fed98e">Container
+			2</div>
 	</div>
 </body>
 </html>
