@@ -1,0 +1,8 @@
+@charset "ISO-8859-1";
+
+.hero-image {
+	background-image: "static/images/crab_hero_image.jpg";
+	background-repeat:no-repeat;
+	background-position: bottom-center;
+	background-size: cover;
+}
