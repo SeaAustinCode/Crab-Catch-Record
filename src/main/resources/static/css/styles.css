@@ -1,8 +1,9 @@
 @charset "ISO-8859-1";
 
-.hero-image {
-	background-image: "static/images/crab_hero_image.jpg";
+hero-image {
+	background-image: url(https://cdn.pixabay.com/photo/2015/11/26/11/36/pot-1063744_960_720.jpg);
 	background-repeat:no-repeat;
 	background-position: bottom-center;
 	background-size: cover;
 }
+

@@ -46,7 +46,7 @@
 			<a class="btn btn-secondary" href="/logout">Logout</a>
 		</div> -->
 	
-		<table class="table border table-striped" style="background-color: #fe9929">
+		<table class="table border border-dark text-white" style="background-color: #fe9929">
 			<thead>
 				<!-- <th scope="col">#</th> -->
 				<th scope="col">Location</th>

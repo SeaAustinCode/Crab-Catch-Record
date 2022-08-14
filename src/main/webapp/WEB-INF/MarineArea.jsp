@@ -45,7 +45,7 @@
 	<div class="container p-3">
 		<h1>Seasons and areas</h1>
 		<h6>Last updated: 8/10 @ 1:00PM</h6>
-		<table class="table border" style="background-color: #fe9929">
+		<table class="table border border-dark text-white" style="background-color: #fe9929; border-width: 3px; border-color: #cc4c02;">
 			<thead>
 				<th scope="col">Marine Area</th>
 				<th scope="col">Location</th>
