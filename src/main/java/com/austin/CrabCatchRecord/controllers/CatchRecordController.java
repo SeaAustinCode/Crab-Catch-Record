@@ -31,20 +31,18 @@ public class CatchRecordController {
 
 	@Autowired
 	private UserService userService;
-	
+
 	// LANDING PAGE
 	@GetMapping("/")
-	public String goToLandingPage(@ModelAttribute("catchRecord") CatchRecord catchRecord,
-			Model model) {
-			return "LandingPage.jsp";
-		}
-	
+	public String goToLandingPage(@ModelAttribute("catchRecord") CatchRecord catchRecord, Model model) {
+		return "LandingPage.jsp";
+	}
+
 	// Marine Areas
-		@GetMapping("/marine-areas")
-		public String goToMarineAreaPage(@ModelAttribute("catchRecord") CatchRecord catchRecord,
-				Model model) {
-				return "MarineArea.jsp";
-			}
+	@GetMapping("/marine-areas")
+	public String goToMarineAreaPage(@ModelAttribute("catchRecord") CatchRecord catchRecord, Model model) {
+		return "MarineArea.jsp";
+	}
 
 	// CREATE NEW CATCH RECORD JSP
 	@GetMapping("/catchrecords/new")
@@ -61,7 +59,6 @@ public class CatchRecordController {
 			return "newCatchRecord.jsp";
 		}
 	}
-	
 
 	// CREATE A NEW CATCH RECORD
 	@PostMapping("/catchrecords/new/method")
@@ -103,32 +100,32 @@ public class CatchRecordController {
 			return "redirect:/";
 		} else {
 			CatchRecord catchRecord = catchRecordService.findCatchRecord(id);
-			if (userId.equals(catchRecord.getCatchrecordowner().getId())){
+			if (userId.equals(catchRecord.getCatchrecordowner().getId())) {
 				model.addAttribute("catchRecord", catchRecord);
-				List<CatchRecord>allCatchRecords = catchRecordService.allCatchRecords();
+				List<CatchRecord> allCatchRecords = catchRecordService.allCatchRecords();
 				model.addAttribute("allCatchRecords", allCatchRecords);
 				return "editCatchRecord.jsp";
 			}
 			return "redirect:/home";
 		}
 	}
-	
+
 	// Update the Catch Record entry - method
-			@PutMapping("/catchrecords/{id}/method")
-			public String updateCatchRecord(@Valid @ModelAttribute("catchRecord")CatchRecord catchRecord, BindingResult result, Model model, HttpSession session) {
-				Long userId = (Long) session.getAttribute("user_id");
-				if (userId == null) {
-					return "redirect:/";	
-				} else if  
-					(result.hasErrors()) {
-					return "editCatchRecord.jsp";
-				} else {
-					catchRecordService.updateCatchRecord(catchRecord);
-					User loggedInUser = userService.findOne(userId);
-					model.addAttribute("loggedInUser", loggedInUser);
-					return "redirect:/home";
-				}
-			}
+	@PutMapping("/catchrecords/{id}/method")
+	public String updateCatchRecord(@Valid @ModelAttribute("catchRecord") CatchRecord catchRecord, BindingResult result,
+			Model model, HttpSession session) {
+		Long userId = (Long) session.getAttribute("user_id");
+		if (userId == null) {
+			return "redirect:/";
+		} else if (result.hasErrors()) {
+			return "editCatchRecord.jsp";
+		} else {
+			catchRecordService.updateCatchRecord(catchRecord);
+			User loggedInUser = userService.findOne(userId);
+			model.addAttribute("loggedInUser", loggedInUser);
+			return "redirect:/home";
+		}
+	}
 
 	// REMOVE CATCH RECORD OWNER
 	@PostMapping("/remove/{id}")

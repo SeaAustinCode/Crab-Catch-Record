@@ -19,6 +19,26 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body style="background-color: #ffffd4;">
+	<div class="container p-3 rounded" style="background-color: #fed98e;">
+		<div
+			class="d-flex justify-content-between align-items-center rounded-lg"
+			style="background-color: #ffffd4;">
+			<h1 class="p-3" style="color: #cc4c02">Austin's Crab Shack</h1>
+			<ul class="nav nav-pills gap-3 p-3 justify-content-end rounded">
+				<li class="nav-item"><a class="nav-link text-white"
+					style="background-color: #fe9929" href="/">Home</a></li>
+				<li class="nav-item"><a class="nav-link text-white"
+					style="background-color: #cc4c02" href="/marine-areas">Marine
+						Areas</a></li>
+				<li class="nav-item"><a class="nav-link text-white"
+					style="background-color: #cc4c02"
+					href="/login-and-registration-page">Create an Account</a></li>
+				<li class="nav-item"><a class="nav-link text-white"
+					style="background-color: #cc4c02" href="/home">Go to User
+						Dashboard</a></li>
+			</ul>
+		</div>
+	</div>
 	<div class="container p-3 my-3 rounded">
 		<table class="table table-striped text-white"
 			style="background-color: #fe9929">

@@ -39,6 +39,9 @@
 				<li class="nav-item"><a class="nav-link text-white"
 					style="background-color: #cc4c02"
 					href="/login-and-registration-page">Create an Account</a></li>
+				<li class="nav-item"><a class="nav-link text-white"
+					style="background-color: #cc4c02" href="/home">Go to User
+						Dashboard</a></li>
 			</ul>
 		</div>
 	</div>
@@ -88,20 +91,26 @@
 		<div class="container p-3 m-3 d-flex rounded"
 			style="background-color: #fed98e">
 			<div class="mx-3 p-3">
-			<h6 style="background-color: #fe9929">Only male dungeoness crab may be kept.</h6>
+				<h6 style="background-color: #fe9929">Only male dungeoness crab
+					may be kept.</h6>
 			</div>
 			<div>
 				<img alt="male v female dungeoness crab from ODFW site"
-					class="rounded" src="https://myodfw.com/sites/default/files/styles/380_max_width/public/MvsFCrab2.jpg?itok=VePsZ4dE">
+					class="rounded"
+					src="https://myodfw.com/sites/default/files/styles/380_max_width/public/MvsFCrab2.jpg?itok=VePsZ4dE">
 			</div>
 		</div>
 		<div class="container p-3 m-3 d-flex rounded"
 			style="background-color: #fed98e">
 			<div>
-				<img class="rounded" style="width: 300px; height: 300px;" alt="crab measurement guide from ODFW site"
+				<img class="rounded" style="width: 300px; height: 300px;"
+					alt="crab measurement guide from ODFW site"
 					src="https://www.dfw.state.or.us/MRP/shellfish/crab/images/crab-measure_ODFW.jpg">
 			</div>
-			<div class="mx-3 p-3"><h6 style="background-color: #fe9929">Crab must be a minimum of 5 3/4 inches to be kept.</h6></div>
+			<div class="mx-3 p-3">
+				<h6 style="background-color: #fe9929">Crab must be a minimum of
+					5 3/4 inches to be kept.</h6>
+			</div>
 		</div>
 	</div>
 </body>

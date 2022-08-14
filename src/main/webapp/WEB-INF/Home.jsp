@@ -31,7 +31,11 @@
 				<li class="nav-item"><a class="nav-link text-white"
 					style="background-color: #cc4c02" href="/marine-areas">Marine
 						Areas</a></li>
-				<li class="nav-item"><a class="btn text-white" style="background-color: #cc4c02" href="/logout">Logout</a></li>
+				<li class="nav-item"><a class="btn text-white"
+					style="background-color: #cc4c02" href="/logout">Logout</a></li>
+				<li class="nav-item"><a class="nav-link text-white"
+					style="background-color: #fe9929" href="/home">Go to User
+						Dashboard</a></li>
 			</ul>
 		</div>
 	</div>
@@ -39,14 +43,15 @@
 		<h1 style="color: #cc4c02">Welcome ${thisUser.userName}!</h1>
 		<%-- <h1>WELCOME ${thisUser.id}</h1> --%>
 		<div>
-			<a class="btn text-white my-3" style="background-color: #cc4c02" href="/catchrecords/new">Create a new
-				Catch Record</a>
+			<a class="btn text-white my-3" style="background-color: #cc4c02"
+				href="/catchrecords/new">Create a new Catch Record</a>
 		</div>
 		<!-- <div>
 			<a class="btn btn-secondary" href="/logout">Logout</a>
 		</div> -->
-	
-		<table class="table border border-dark text-white" style="background-color: #fe9929">
+
+		<table class="table border border-dark text-white"
+			style="background-color: #fe9929">
 			<thead>
 				<!-- <th scope="col">#</th> -->
 				<th scope="col">Location</th>
@@ -61,7 +66,8 @@
 							<td>${catchRecord.marinearea}</td>
 							<td>${catchRecord.catchamount}/5</td>
 							<td>${catchRecord.month}/${catchRecord.day}</td>
-							<td><a class="btn text-white" style="background-color: #cc4c02"
+							<td><a class="btn text-white"
+								style="background-color: #cc4c02"
 								href="/catchrecords/${catchRecord.id}">View</a></td>
 						</c:if>
 				</c:forEach>
