@@ -14,9 +14,9 @@ I used Bootstrap in addition to a theme picker to quickly style the frontend and
 
 Preview: <br>
 <img src="https://i.imgur.com/HiENHt1.png" />
-<img src="https://i.imgur.com/wXALEvM.png" height="350px" width="275px" /> <br><br>
-<img src="https://i.imgur.com/PGNOJ4w.png" height="350px" width="275px" />
-<img src="https://i.imgur.com/GKvJ9pz.png" height="350px" width="275px" />
+<img src="https://i.imgur.com/wXALEvM.png" /> <br><br>
+<img src="https://i.imgur.com/PGNOJ4w.png" />
+<img src="https://i.imgur.com/GKvJ9pz.png" />
 
 Thank you for taking some time to look over my project, if you have any questions please feel free to contact me at the email below and, I hope you have a great day! 
 
