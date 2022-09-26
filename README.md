@@ -13,8 +13,8 @@ Because of the nature of the website, to create a record a user must be logged i
 I used Bootstrap in addition to a theme picker to quickly style the frontend and color palette of this project. 
 
 Preview: <br>
-<img src="https://i.imgur.com/HiENHt1.png" height="550px" width="450px" />
-<img src="https://i.imgur.com/wXALEvM.png" height="550px" width="450px" />
+<img src="https://i.imgur.com/HiENHt1.png" height="550px" width="450px" /> <br>
+<img src="https://i.imgur.com/wXALEvM.png" height="350px" width="275px" />
 
 Thank you for taking some time to look over my project, if you have any questions please feel free to contact me at the email below and, I hope you have a great day! 
 
