@@ -5,7 +5,7 @@ Demo:
 https://www.youtube.com/watch?v=-xCyaNrckBI
 
 Preview: <br>
-<img src="https://i.imgur.com/HiENHt1.png" height="500px" width="200px" />
+<img src="https://i.imgur.com/HiENHt1.png" height="500px" width="300px" />
 
 This project was designed to help fulfill a problem that I noticed in my everyday life! Recently I started the new hobby of crab fishing in Washington State. I realized that all of the reporting for this sport was done manually and I wanted to streamline the process.
 
